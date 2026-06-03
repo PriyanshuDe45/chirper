@@ -9,7 +9,7 @@
                 <form method="POST" action="/chirper/chirps">
                     @csrf
                     <div class="form-control w-full">
-                        <textarea name="message" placeholder="Whats in your mind?" class="textarea textarea-bordered w-full resize-none @error('message') textarea-error @enderror" cols="30" rows="4" maxlength="255">{{old('message')}}}</textarea>
+                        <textarea name="message" placeholder="Whats in your mind?" class="textarea textarea-bordered w-full resize-none @error('message') textarea-error @enderror" cols="30" rows="4" maxlength="255">{{old('message')}}</textarea>
 
                         @error('message')
                             <div class="label">

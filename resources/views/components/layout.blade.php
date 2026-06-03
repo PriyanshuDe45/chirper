@@ -57,13 +57,13 @@
     <div class="navbar-end gap-4 px-4">
         @auth
             <span class="text-sm">{{ auth()->user()->name }}</span>
-            <form method="POST" action="/logout" class="inline">
+            <form method="POST" action="/chirper/logout" class="inline">
                 @csrf
                 <button type="submit" class="btn btn-ghost btn-sm">Logout</button>
             </form>
         @else
-            <a href="/login" class="btn btn-ghost btn-sm">Sign In</a>
-            <a href="/register" class="btn btn-primary btn-sm">Sign Up</a>
+            <a href="/chirper/login" class="btn btn-ghost btn-sm">Sign In</a>
+            <a href="/chirper/register" class="btn btn-primary btn-sm">Sign Up</a>
         @endauth
     </div>
 </nav>
