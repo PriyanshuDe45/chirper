@@ -4,20 +4,25 @@
     <div class="card-body">
         <div class="flex items-start space-x-3">
 
+
+
             {{-- Avatar --}}
             @if ($chirp->user)
                 <div class="avatar flex-shrink-0">
-                    <div class="size-10 rounded-full">
-                        <img
-                            src="https://avatars.laravel.cloud/{{ urlencode($chirp->user->email) }}"
-                            alt="{{ $chirp->user->name }} avatar"
-                        />
+                    <div class="avatar">
+                        <div class="size-10 rounded-full">
+                            <img src="https://avatars.laravel.cloud/{{ urlencode($chirp->user->email) }}?vibe=ocean"
+                                 alt="{{ $chirp->user->name }}'s avatar" class="rounded-full" />
+                        </div>
                     </div>
                 </div>
             @else
-                <div class="avatar placeholder flex-shrink-0">
-                    <div class="bg-neutral text-neutral-content rounded-full w-10">
-                        <span>A</span>
+                <div class="avatar flex-shrink-0">
+                    <div class="avatar">
+                        <div class="size-10 rounded-full">
+                            <img src="https://avatars.laravel.cloud/vibe=ocean"
+                                 class="rounded-full" />
+                        </div>
                     </div>
                 </div>
             @endif
@@ -26,7 +31,7 @@
             <div class="min-w-0">
 
                 {{-- Top Row --}}
-                <div class="flex items-center ">
+                <div class="flex items-center space-x-1">
                     <p class="font-semibold text-sm">
                         {{ $chirp->user ? $chirp->user->name : 'Anonymous' }}
                     </p>
